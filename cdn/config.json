@@ -1,0 +1,5 @@
+{
+    "root": "../storage",
+    "host": "localhost",
+    "port": 3001
+}
