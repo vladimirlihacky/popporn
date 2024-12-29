@@ -1,0 +1,13 @@
+[
+    {
+        "pathPrefix": "/cdn/",
+        "redirectTo": "localhost:3001",
+        "allowedMethods": ["GET", "POST"]
+    },
+
+    {
+        "pathPrefix": "/cms/",
+        "redirectTo": "localhost:3002",
+        "allowedMethods": ["GET", "POST", "DELETE", "PUT"]
+    }
+]
