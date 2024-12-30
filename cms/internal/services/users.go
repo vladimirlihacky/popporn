@@ -17,7 +17,7 @@ type Auth interface {
 
 type Users struct {
 	auth Auth
-	repo repositories.Users
+	repo *repositories.Users
 }
 
 func (users *Users) Create(data *UserWithCredentials) error {
@@ -31,4 +31,13 @@ func (users *Users) Create(data *UserWithCredentials) error {
 	}
 
 	return nil
+}
+
+func NewUsersService(auth Auth, repo *repositories.Users) *Users {
+	service := &Users{
+		auth: auth,
+		repo: repo,
+	}
+
+	return service
 }
